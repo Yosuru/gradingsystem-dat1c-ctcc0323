@@ -41,8 +41,9 @@ public class GradingSystem extends JFrame implements ActionListener {
     public void GradingSystem(){
         //INITIALIZING UI
         FRMGradingSystem.setSize(400,300);
-        FRMGradingSystem.setResizable(false);
         FRMGradingSystem.setLayout(null);
+        FRMGradingSystem.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        FRMGradingSystem.setResizable(false);
         FRMGradingSystem.setLocationRelativeTo(null);
         FRMGradingSystem.getContentPane().setBackground(BGCOLOR);
         FRMWarning.setSize(300,100);
@@ -318,7 +319,6 @@ public class GradingSystem extends JFrame implements ActionListener {
         TDisplayData2.getColumnModel().getColumn(0).setPreferredWidth(10);
         TDisplayData2.setVisible(true);
         TDisplayData2.setVisible(false);
-        JScrollPane ScrollP = new JScrollPane();
         //FINAL UI
         FRMGradingSystem.add(LBLHeader);
         FRMGradingSystem.add(LBLSubHeader);
@@ -347,7 +347,6 @@ public class GradingSystem extends JFrame implements ActionListener {
         FRMGradingSystem.add(LBLTotalScore);
         FRMGradingSystem.add(LBLTaskType);
         FRMGradingSystem.add(TDisplayData1);
-        FRMGradingSystem.add(ScrollP);
         FRMGradingSystem.add(tfinput2);
         FRMGradingSystem.add(btadd2);
         FRMGradingSystem.add(btremove2);
@@ -579,7 +578,7 @@ public class GradingSystem extends JFrame implements ActionListener {
                     SMCategoryMultiplier1 = 0;
                     SMCategoryMultiplier2 = 0;
                     SMCategoryMultiplier3 = 0;
-                    LBLWarning.setText("Multipler must equate to 100!");
+                    LBLWarning.setText("Multiplier must equate to 100!");
                     FRMWarning.setVisible(true);
                 }
             }
